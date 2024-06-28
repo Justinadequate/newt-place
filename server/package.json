@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "@graphql-codegen/cli": "^2.6.2",
+    "apollo-server-express": "^3.6.3",
+    "express": "^4.17.3",
+    "graphql": "^16.3.0",
+    "mongodb": "^6.7.0",
+    "typescript": "^4.5.5",
+    "uuid": "^8.3.2"
+  },
+  "scripts": {
+    "gen-types": "graphql-codegen --config codegen.yml",
+    "start": "ts-node server.ts"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "2.6.2",
+    "@graphql-codegen/typescript": "2.4.5",
+    "@graphql-codegen/typescript-resolvers": "2.5.2"
+  }
+}

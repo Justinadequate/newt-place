@@ -1,0 +1,31 @@
+input ListInput {
+  title: String!
+  items: [ItemInput]
+}
+
+input ItemInput {
+  title: String!
+  description: String!
+}
+
+type List {
+  _id: String!
+  title: String!
+  items: [Item]
+}
+
+type Item {
+  title: String!
+  description: String!
+}
+
+type Query {
+  lists:[List]!
+  list(id: String!): List!
+}
+
+type Mutation {
+  createTodo(todo: ListInput!): List
+  updateTodo(id: String!, title: String, items: [ItemInput]): List
+  deleteTodo(id: String!): String
+}
